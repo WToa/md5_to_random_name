@@ -37,16 +37,6 @@ puts name
 # => "amazing-dolphin-5a0f00"
 ```
 
-### Using the Generator Class
-
-```ruby
-require 'md5_to_random_name'
-
-generator = Md5ToRandomName::Generator.new
-md5 = Digest::MD5.hexdigest("hello world")
-name = generator.generate(md5)
-```
-
 ### Custom Word Lists
 
 You can provide your own adjectives and animals:
