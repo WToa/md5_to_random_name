@@ -1,0 +1,8 @@
+# frozen_string_literal: true
+
+module Md5ToRandomName
+  module WordLists
+    ADJECTIVES: Array[String]
+    ANIMALS: Array[String]
+  end
+end

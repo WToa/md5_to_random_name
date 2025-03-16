@@ -1,0 +1,30 @@
+# sig/md5_to_random_name.rbs
+module Md5ToRandomName
+  VERSION: String
+
+  # Exception classes
+  class Error < StandardError
+  end
+
+  class InvalidMd5Hash < Error
+  end
+
+  # Generator class
+  class Generator
+    @adjectives: Array[String]
+    @animals: Array[String]
+
+    def initialize: (?Array[String] adjectives, ?Array[String] animals) -> void
+    def generate: (String md5) -> String
+
+    private
+
+    def validate_md5!: (String md5) -> void
+    def select_adjective: (String md5) -> String
+    def select_animal: (String md5) -> String
+    def extract_suffix: (String md5) -> String
+    def format_name: (String adjective, String animal, String suffix) -> String
+  end
+
+  def self.generate: (String md5, ?Array[String] adjectives, ?Array[String] animals) -> String
+end
